@@ -62,6 +62,7 @@ TARGET_KERNEL_ARCH := arm64
 BOARD_RAMDISK_USE_LZ4 := true
 
 # Kernel modules
+BOARD_VENDOR_KERNEL_MODULES_BLOCKLIST_FILE := $(COMMON_PATH)/modules.blocklist
 BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(COMMON_PATH)/modules.load))
 
 # Use External DTC_OVERLAY_TEST
