@@ -24,7 +24,6 @@ $(call inherit-product, vendor/sony/sm8150-common/sm8150-common-vendor.mk)
 # VNDK
 BOARD_SHIPPING_API_LEVEL := 30
 PRODUCT_SHIPPING_API_LEVEL := $(BOARD_SHIPPING_API_LEVEL)
-PRODUCT_USE_PRODUCT_VNDK_OVERRIDE := true
 
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
