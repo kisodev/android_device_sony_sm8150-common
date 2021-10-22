@@ -17,6 +17,10 @@
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
+# Disable APEX compression
+# Keep this after including updatable_apex.mk
+PRODUCT_COMPRESSED_APEX := false
+
 # Include common vendor stuff
 $(call inherit-product, vendor/sony/sm8150-common/sm8150-common-vendor.mk)
 
