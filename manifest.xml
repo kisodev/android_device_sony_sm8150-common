@@ -16,11 +16,6 @@
         <fqname>@1.0::IBluetoothHci/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>android.hardware.bluetooth.audio</name>
-        <transport>hwbinder</transport>
-        <fqname>@2.1::IBluetoothAudioProvidersFactory/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.somc.hardware.camera.provider</name>
         <transport>hwbinder</transport>
         <fqname>@1.0::IVendorSomcCameraProvider/internal/0</fqname>
