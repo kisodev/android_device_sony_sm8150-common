@@ -796,7 +796,6 @@ vendor/lib/libcdfw_remote_api.so
 vendor/lib/vendor.qti.hardware.qccsyshal@1.0.so
 
 # Graphics (Adreno)
-vendor/app/com.qualcomm.qti.gpudrivers.msmnile.api30/com.qualcomm.qti.gpudrivers.msmnile.api30.apk;PRESIGNED
 vendor/lib64/egl/eglSubDriverAndroid.so
 vendor/lib64/egl/libEGL_adreno.so
 vendor/lib64/egl/libGLESv1_CM_adreno.so
