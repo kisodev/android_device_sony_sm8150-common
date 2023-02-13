@@ -1,5 +1,5 @@
 
-# Copyright (C) 2018 The LineageOS Project
+# Copyright (C) 2018-2023 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,12 +14,11 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/sony/bahamut
-PREBUILT_PATH := device/sony/bahamut-prebuilt
+COMMON_PATH := device/sony/sm8150-common
 
 BOARD_VENDOR := sony
 
-TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
+TARGET_SPECIFIC_HEADER_PATH := $(COMMON_PATH)/include
 
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
@@ -28,9 +27,6 @@ BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
 BUILD_BROKEN_VINTF_PRODUCT_COPY_FILES := true
 BUILD_BROKEN_PREBUILT_ELF_FILES := true
 BUILD_BROKEN_ENFORCE_SYSPROP_OWNER := true
-
-# Assert
-TARGET_OTA_ASSERT_DEVICE := J9260,J9210,J8270,J8210,bahamut,bahamut_dual
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2520
@@ -57,7 +53,6 @@ TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a76
 TARGET_USES_64_BIT_BINDER := true
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := msmnile
 TARGET_NO_BOOTLOADER := true
 
 # Platform
@@ -65,7 +60,7 @@ TARGET_BOARD_PLATFORM := msmnile
 
 # Kernel
 BOARD_BOOT_HEADER_VERSION := 2
-BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom androidboot.memcg=1 lpm_levels.sleep_disabled=1 video=vfb:640x400,bpp=32,memsize=3072000 msm_rtb.filter=0x237 service_locator.enable=1 swiotlb=2048 loop.max_part=16 androidboot.usbcontroller=a600000.dwc3 buildproduct=bahamut_dsds buildid=KUMANO-1.2.0-210818-1151 panic_on_err=1
+BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom androidboot.memcg=1 lpm_levels.sleep_disabled=1 video=vfb:640x400,bpp=32,memsize=3072000 msm_rtb.filter=0x237 service_locator.enable=1 swiotlb=2048 loop.max_part=16 androidboot.usbcontroller=a600000.dwc3 buildid=KUMANO-1.2.0-210818-1151 panic_on_err=1
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
@@ -77,32 +72,16 @@ BOARD_KERNEL_IMAGE_NAME := Image
 TARGET_KERNEL_ADDITIONAL_FLAGS := DTC_EXT=$(shell pwd)/prebuilts/misc/linux-x86/dtc/dtc
 BOARD_KERNEL_SEPARATED_DTBO := true
 TARGET_KERNEL_ARCH := arm64
-TARGET_KERNEL_HEADER_ARCH := arm64
-TARGET_KERNEL_SOURCE := kernel/sony/sm8150
-TARGET_KERNEL_HEADERS := kernel/sony/sm8150
-TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_KERNEL_CONFIG := vendor/bahamut_defconfig
-TARGET_FORCE_PREBUILT_KERNEL := true
-TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image
-BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
-BOARD_PREBUILT_DTBIMAGE_DIR := $(DEVICE_PATH)/prebuilt/dtb
-
-BOARD_MKBOOTIMG_ARGS += --base $(BOARD_KERNEL_BASE)
-BOARD_MKBOOTIMG_ARGS += --pagesize $(BOARD_KERNEL_PAGESIZE)
-BOARD_MKBOOTIMG_ARGS += --ramdisk_offset $(BOARD_RAMDISK_OFFSET)
-BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
-BOARD_MKBOOTIMG_ARGS += --kernel_offset $(BOARD_KERNEL_OFFSET)
-BOARD_MKBOOTIMG_ARGS += --dtb_offset $(BOARD_DTB_OFFSET)
-BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
+TARGET_KERNEL_HEADER_ARCH := arm64\
 
 # QCOM
 BOARD_USES_QCOM_HARDWARE := true
 BUILD_WITHOUT_VENDOR := true
 
 # Properties
-TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
-TARGET_PRODUCT_PROP += $(DEVICE_PATH)/product.prop
-TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
+TARGET_ODM_PROP += $(COMMON_PATH)/odm.prop
+TARGET_PRODUCT_PROP += $(COMMON_PATH)/product.prop
+TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
 
 # Treble
 BOARD_VNDK_VERSION := current
@@ -114,7 +93,7 @@ BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
 USE_CUSTOM_AUDIO_POLICY := 1
 
 # Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(COMMON_PATH)/bluetooth
 
 # Camera
 TARGET_USES_QTI_CAMERA_DEVICE := true
@@ -140,19 +119,17 @@ OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 TARGET_ENABLE_MEDIADRM_64 := true
 
 # Filesystem
-TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
+TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 
 # HIDL
-DEVICE_FRAMEWORK_MANIFEST_FILE := $(DEVICE_PATH)/framework_manifest.xml
+DEVICE_FRAMEWORK_MANIFEST_FILE := $(COMMON_PATH)/framework_manifest.xml
 
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 0x04000000
-BOARD_DTBOIMG_PARTITION_SIZE := 8388608
 # Reserve space for data encryption (114994110464-16384)
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 114994094080
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 4326191104
 BOARD_VENDORIMAGE_PARTITION_SIZE := 1056714752
 BOARD_SYSTEMIMAGE_FILE_SYSTEM_TYPE := ext4
@@ -170,7 +147,7 @@ BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 TARGET_NO_RECOVERY := true
 BOARD_USES_RECOVERY_AS_BOOT := true
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
-TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
+TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab.qcom
 TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
@@ -179,8 +156,8 @@ TARGET_USES_MKE2FS := true
 # Sepolicy
 include device/qcom/sepolicy/SEPolicy.mk
 
-SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
-BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private
+BOARD_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
 SELINUX_IGNORE_NEVERALLOWS := true
 
 # Verified Boot
@@ -193,5 +170,3 @@ BOARD_AVB_VBMETA_SYSTEM_KEY_PATH := external/avb/test/data/testkey_rsa2048.pem
 BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX := $(PLATFORM_SECURITY_PATCH_TIMESTAMP)
 BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX_LOCATION := 1
 
-# Inherit from the proprietary version
--include vendor/sony/bahamut/BoardConfigVendor.mk

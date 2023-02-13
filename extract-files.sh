@@ -1,15 +1,12 @@
 #!/bin/bash
 #
 # Copyright (C) 2016 The CyanogenMod Project
-# Copyright (C) 2017-2021 The LineageOS Project
+# Copyright (C) 2017-2023 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
 
 set -e
-
-DEVICE_COMMON=bahamut
-VENDOR=sony
 
 # Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
@@ -81,13 +78,19 @@ function blob_fixup() {
     esac
 }
 
-if [ -z "${SRC}" ]; then
-    SRC="adb"
-fi
-
+if [ -z "${ONLY_TARGET}" ]; then
     # Initialize the helper for common device
     setup_vendor "${DEVICE_COMMON}" "${VENDOR}" "${ANDROID_ROOT}" true "${CLEAN_VENDOR}"
 
     extract "${MY_DIR}/proprietary-files.txt" "${SRC}" "${KANG}" --section "${SECTION}"
+fi
+
+if [ -z "${ONLY_COMMON}" ] && [ -s "${MY_DIR}/../${DEVICE}/proprietary-files.txt" ]; then
+    # Reinitialize the helper for device
+    source "${MY_DIR}/../${DEVICE}/extract-files.sh"
+    setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" false "${CLEAN_VENDOR}"
+
+    extract "${MY_DIR}/../${DEVICE}/proprietary-files.txt" "${SRC}" "${KANG}" --section "${SECTION}"
+fi
 
 "${MY_DIR}/setup-makefiles.sh"
