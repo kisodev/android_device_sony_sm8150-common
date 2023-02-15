@@ -91,11 +91,6 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 BOARD_USES_QCOM_HARDWARE := true
 BUILD_WITHOUT_VENDOR := true
 
-# Properties
-TARGET_ODM_PROP += $(COMMON_PATH)/odm.prop
-TARGET_PRODUCT_PROP += $(COMMON_PATH)/product.prop
-TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
-
 # Treble
 BOARD_VNDK_VERSION := current
 
