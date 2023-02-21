@@ -379,6 +379,10 @@
             <fqname>ILights/default</fqname>
         </hal>
     </manifest>
+    <hal format="aidl">
+        <name>vendor.semc.hardware.extlight</name>
+        <fqname>IExtLight/default</fqname>
+    </hal>
     <hal format="hidl">
         <name>vendor.semc.hardware.charger</name>
         <transport>hwbinder</transport>

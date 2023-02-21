@@ -709,6 +709,10 @@ vendor/lib64/vendor.qti.esepowermanager@1.1.so
 vendor/lib/vendor.qti.esepowermanager@1.0.so
 vendor/lib/vendor.qti.esepowermanager@1.1.so
 
+# ExtLight
+vendor/bin/hw/vendor.semc.hardware.extlight-service.somc
+vendor/etc/init/vendor.semc.hardware.extlight-somc.rc
+
 # FM
 vendor/lib/vendor.qti.hardware.fm@1.0.so
 vendor/lib64/vendor.qti.hardware.fm@1.0.so

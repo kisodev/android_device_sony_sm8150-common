@@ -91,6 +91,13 @@
             <instance>internal/0</instance>
         </interface>
     </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.semc.hardware.extlight</name>
+        <interface>
+            <name>IExtLight</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
     <hal format="hidl">
         <name>vendor.somc.hardware.modemswitcher</name>
         <transport>hwbinder</transport>
