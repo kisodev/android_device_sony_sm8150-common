@@ -181,10 +181,6 @@ PRODUCT_PACKAGES += \
     lib-imsvtshim \
     lib-camshim
 
-# Soong namespaces
-PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)
-
 # Telephony
 PRODUCT_PACKAGES += \
     ims-ext-common \
