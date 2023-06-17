@@ -8,16 +8,8 @@
         </interface>
     </hal>
     <hal format="hidl">
-       <name>vendor.semc.hardware.secd</name>
-       <version>1.1</version>
-       <interface>
-            <name>IDeviceSecurity</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
        <name>vendor.somc.hardware.security.secd</name>
-       <version>1.1</version>
+       <version>1.0</version>
        <interface>
             <name>IDeviceSecurity</name>
             <instance>default</instance>
@@ -34,13 +26,9 @@
     </hal>
     <hal format="hidl">
        <name>vendor.semc.hardware.display</name>
-       <version>2.2</version>
+       <version>1.0</version>
        <interface>
             <name>IDisplay</name>
-            <instance>default</instance>
-        </interface>
-       <interface>
-            <name>IFramerateController</name>
             <instance>default</instance>
         </interface>
     </hal>
@@ -82,6 +70,33 @@
         <version>1.0</version>
         <interface>
             <name>ICharger</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.configstore</name>
+        <transport>hwbinder</transport>
+        <version>1.1</version>
+        <interface>
+            <name>ISurfaceFlingerConfigs</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.somc.hardware.camera.provider</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IVendorSomcCameraProvider</name>
+            <instance>internal/0</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.somc.hardware.modemswitcher</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IModemSwitcher</name>
             <instance>default</instance>
         </interface>
     </hal>

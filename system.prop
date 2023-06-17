@@ -19,7 +19,8 @@ persist.vendor.color.matrix=2
 persist.vendor.cne.feature=1
 
 # DPM
-persist.vendor.dpm.feature=9
+persist.vendor.dpm.feature=1
+persist.vendor.dpmhalservice.enable=1
 
 # IMS
 persist.dbg.volte_avail_ovr=1
@@ -41,28 +42,24 @@ ro.vendor.qti.core_ctl_min_cpu=2
 # Radio
 persist.sys.fflag.override.settings_network_and_internet_v2=true
 
-# Touchscreen
-persist.vendor.qti.inputopts.enable=true
-persist.vendor.qti.inputopts.movetouchslop=0.6
-
 # Netmgr
 persist.vendor.data.iwlan.enable=true
+ro.vendor.use_data_netmgrd=true
 persist.vendor.data.mode=concurrent
 
-# SSR
-persist.vendor.ssr.restart_level=ALL_ENABLE
-
 # SOMC
-# ro.semc.ms_type_id=PM-1281-BV
-# ro.semc.product.device=AU
-# ro.semc.product.model=XQ-AU52
-# ro.semc.product.name=Xperia 1 II
-# ro.semc.version.fs=GENERIC
-# ro.semc.version.fs_revision=59.0.A.8.33
-# ro.semc.version.sw=1311-7920
-# ro.semc.version.sw_revision=59.0.A.8.33
-# ro.semc.version.sw_type=user
-# ro.semc.version.sw_variant=GLOBAL4GB-C2
+ro.boot.hardware.sku=J9210
+ro.semc.content.number=PB2
+ro.semc.ms_type_id=PM-1241-BV
+ro.semc.product.device=J9210
+ro.semc.product.model=J9210
+ro.semc.product.name=Xperia 5
+ro.semc.version.fs=GENERIC
+ro.semc.version.fs_revision=55.2.A.4.332
+ro.semc.version.sw=1318-9846
+ro.semc.version.sw_revision=55.2.A.4.332
+ro.semc.version.sw_type=user
+ro.semc.version.sw_variant=GLOBAL-A2
 
 # Vendor
 ro.vendor.qti.va_aosp.support=1
