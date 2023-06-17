@@ -4,6 +4,6 @@
 //
 
 runtime_resource_overlay {
-    name: "SonyEdoFrameworksResCommon",
-    device_specific: true,
+    name: "SonyKumanoSettingsResCommon",
+    vendor: true,
 }

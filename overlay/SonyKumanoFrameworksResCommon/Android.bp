@@ -4,6 +4,6 @@
 //
 
 runtime_resource_overlay {
-    name: "SonyEdoTelephonyResCommon",
-    product_specific: true,
+    name: "SonyKumanoFrameworksResCommon",
+    vendor: true,
 }
