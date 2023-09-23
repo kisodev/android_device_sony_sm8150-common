@@ -4,4 +4,7 @@ binder_call(vendor_thermal-engine, hal_idd_default)
 get_prop(vendor_thermal-engine, hwservicemanager_prop)
 
 allow vendor_thermal-engine hal_idd_hwservice:hwservice_manager find;
+allow vendor_thermal-engine vendor_file:file r_file_perms;
+allow vendor_thermal-engine somc_camera_prop:file { read };
+get_prop(vendor_thermal-engine, somc_camera_prop)
 

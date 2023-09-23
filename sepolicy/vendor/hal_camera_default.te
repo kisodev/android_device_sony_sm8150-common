@@ -30,4 +30,10 @@ allow hal_camera_default system_server:binder { call transfer };
 
 allow hal_camera_default hal_secd_default:binder call;
 
+allow hal_camera_default vendor_file:file { lock };
+
 get_prop(hal_camera_default, somc_thermal_prop)
+set_prop(hal_camera_default, somc_camera_prop)
+
+allow hal_camera_default socket_device:sock_file { write };
+allow hal_camera_default vendor_xdsp_device:chr_file { ioctl };
