@@ -7,4 +7,7 @@ allow vendor_thermal-engine hal_idd_hwservice:hwservice_manager find;
 allow vendor_thermal-engine vendor_file:file r_file_perms;
 allow vendor_thermal-engine somc_camera_prop:file { read };
 get_prop(vendor_thermal-engine, somc_camera_prop)
+allow vendor_thermal-engine illumination_service_socket:sock_file { write };
+allow vendor_thermal-engine illumination_service:unix_stream_socket { connectto };
+
 

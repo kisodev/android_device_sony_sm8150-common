@@ -26,3 +26,6 @@ allow init keyprovd_exec:file { read getattr map execute open };
 allow init vendor_hal_soter_qti_exec:file { read getattr map execute open };
 
 allow init vendor_hal_soter_qti:process { transition siginh rlimitinh };
+
+allow init vendor_sysfs_graphics:file r_file_perms;
+allow init illumination_service_exec:file { read getattr map execute open };

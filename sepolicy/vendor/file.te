@@ -5,10 +5,12 @@ type idd_data_file, file_type;
 type idd_fsck_file, file_type;
 type idd_output_file, file_type;
 type idd_crashdata_file, file_type;
+type illumination_service_data_file, file_type;
 type startupprober_file, file_type;
 type idd_root_dir, file_type;
 type tad_socket, file_type;
 type idd_socket_file, file_type;
+type illumination_service_socket, file_type;
 type sony_camera_device, file_type;
 
 type tof_rgbcir_sysfs, fs_type, sysfs_type;
