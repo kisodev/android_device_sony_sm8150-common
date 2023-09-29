@@ -1050,6 +1050,17 @@ vendor/lib64/libqti-perfd-client.so
 vendor/lib64/libqti-perfd.so
 vendor/lib64/libqti-util.so
 
+# Perf LM
+vendor/etc/lm/AdaptLaunchFeature.xml
+vendor/etc/lm/AppClassifierFeature.xml
+vendor/etc/lm/GameOptimizationFeature.xml
+vendor/lib/vendor.qti.memory.pasrmanager@1.0.so
+vendor/lib64/libadaptlaunch.so
+vendor/lib64/libappclassifier.so
+vendor/lib64/libgameoptfeature.so
+vendor/lib64/libmeters-ns.so
+vendor/lib64/vendor.qti.memory.pasrmanager@1.0.so
+
 # QMI
 vendor/bin/irsc_util
 vendor/etc/sec_config
