@@ -599,6 +599,10 @@ vendor/firmware/egista.b06
 vendor/firmware/egista.b07
 vendor/firmware/egista.mdt
 
+# Display (HWC)
+vendor/bin/qdcmss
+vendor/etc/init/qdcmss.rc
+
 # Display (SDM) - from NX627J - RKQ1.200826.002
 vendor/lib64/libdisplayqos.so|3e95c6aedbfca5132ef75365e0a45a32c79b1fd6
 vendor/lib64/libqseed3.so|a449d79b912415f542509874b43338b27795a1c3
@@ -1667,6 +1671,5 @@ vendor/etc/wifi/wpa_supplicant_overlay.conf
 vendor/bin/embmsslServer
 vendor/bin/garden_app
 vendor/bin/mmid
-vendor/bin/qdcmss
 vendor/bin/tloc_daemon
 vendor/etc/init/tloc_daemon.rc
