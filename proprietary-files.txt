@@ -1476,8 +1476,9 @@ vendor/bin/tad
 # Time services
 -vendor/app/TimeService/TimeService.apk
 vendor/bin/time_daemon
-vendor/lib64/libtime_genoff.so
+vendor/etc/init/init.time_daemon.rc
 vendor/lib/libtime_genoff.so
+vendor/lib64/libtime_genoff.so
 
 # Trimarea
 vendor/lib64/libtpm.so
