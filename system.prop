@@ -22,6 +22,9 @@ persist.vendor.cne.feature=1
 persist.vendor.dpm.feature=1
 persist.vendor.dpmhalservice.enable=1
 
+# fastbootd
+ro.fastbootd.available=true
+
 # IMS
 persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=1
