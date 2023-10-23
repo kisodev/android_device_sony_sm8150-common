@@ -558,12 +558,10 @@ vendor/lib64/vendor.qti.hardware.cvp@1.0.so
 # Display
 system_ext/lib64/libsdm-disp-apis.qti.so
 system_ext/lib64/vendor.display.color@1.0.so
-vendor/bin/hw/vendor.semc.hardware.display@1.0-service
-vendor/etc/init/vendor.semc.hardware.display@1.0-service.rc
-vendor/lib/vendor.semc.hardware.display@1.0.so
-vendor/lib64/vendor.semc.hardware.display@1.0.so
-vendor/lib64/libdpps.so
+vendor/bin/hw/vendor.semc.hardware.display@2.2-service|0157320a84fe216313b134488c43b29c8f841853
+vendor/etc/init/vendor.semc.hardware.display@2.2-service.rc|a26a5bfd1e59abcd79f434e4a94e227482b489cc
 vendor/lib/libdpps.so
+vendor/lib64/libdpps.so
 
 # DPM
 framework/tcmclient.jar
