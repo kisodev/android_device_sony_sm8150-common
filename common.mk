@@ -340,6 +340,7 @@ PRODUCT_PACKAGES += \
     vendor.lineage.health-service.default
 
 PRODUCT_PACKAGES += \
+    android.hardware.media.omx@1.0-service \
     libavservices_minijail \
     libavservices_minijail.vendor \
     libavservices_minijail_vendor \
