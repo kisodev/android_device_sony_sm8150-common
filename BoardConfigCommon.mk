@@ -61,6 +61,9 @@ BOARD_KERNEL_SEPARATED_DTBO := true
 TARGET_KERNEL_ARCH := arm64
 BOARD_RAMDISK_USE_LZ4 := true
 
+# Kernel modules
+BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(COMMON_PATH)/modules.load))
+
 # Use External DTC_OVERLAY_TEST
 TARGET_KERNEL_ADDITIONAL_FLAGS := \
     DTC_OVERLAY_TEST_EXT=$(shell pwd)/prebuilts/misc/$(HOST_OS)-x86/libufdt/ufdt_apply_overlay \
