@@ -8,7 +8,7 @@ on early-init
         last_logs \
         powerkey_forcecrash \
         bu520x1nvx \
-        et580-int \
+        et580_platform \
         sony_camera \
         tcs3490 \
         flash_led \

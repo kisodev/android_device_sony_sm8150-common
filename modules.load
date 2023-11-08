@@ -5,7 +5,7 @@ bu520x1nvx.ko
 camera_sync.ko
 effect_dlkm.ko
 effect_params_dlkm.ko
-et580-int.ko
+et580_platform.ko
 flash_led.ko
 hdmi_dlkm.ko
 last_logs.ko
