@@ -2364,8 +2364,8 @@
 
     <path name="stereo-mic">
         <path name="stereo-mic-common" />
-        <ctl name="DEC8 Volume" value="84" />
-        <ctl name="DEC7 Volume" value="89" />
+        <ctl name="DEC8 Volume" value="91" />
+        <ctl name="DEC7 Volume" value="94" />
     </path>
 
     <path name="speaker-mono-mic-common">
@@ -2873,8 +2873,8 @@
 
     <path name="camcorder-mic">
         <path name="camcorder-mic-common" />
-        <ctl name="DEC8 Volume" value="84" />
-        <ctl name="DEC7 Volume" value="89" />
+        <ctl name="DEC8 Volume" value="91" />
+        <ctl name="DEC7 Volume" value="94" />
     </path>
 
     <path name="bt-sco-headset">
