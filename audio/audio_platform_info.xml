@@ -54,7 +54,8 @@
         <device name="SND_DEVICE_IN_VOICE_REC_TMIC" acdb_id="131"/>
         <device name="SND_DEVICE_IN_VOICE_REC_DMIC_FLUENCE" acdb_id="132"/>
         <device name="SND_DEVICE_IN_VOICE_TTY_VCO_HANDSET_MIC" acdb_id="4"/>
-        <device name="SND_DEVICE_IN_HANDSET_MIC" acdb_id="35"/>
+        <device name="SND_DEVICE_IN_HANDSET_MIC" acdb_id="11"/>
+        <device name="SND_DEVICE_IN_HANDSET_DMIC_STEREO" acdb_id="35"/>
 
         <!-- SOMC acdb ids -->
         <device name="SND_DEVICE_OUT_SONY_VOICE_TTY_HCO_SPEAKER" acdb_id="124"/>
