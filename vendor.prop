@@ -171,14 +171,10 @@ ro.frp.pst=/dev/block/bootdevice/by-name/frp
 # Gatekeeper
 vendor.gatekeeper.disable_spu=true
 
-# GPS
-persist.backup.ntpServer=0.pool.ntp.org
-
 # Graphics
 debug.egl.hw=0
 debug.mdpcomp.logs=0
 debug.sf.hw=0
-persist.demo.hdmirotationlock=false
 persist.sys.sf.color_saturation=1.0
 persist.vendor.dpm.feature=1
 persist.vendor.dpmhalservice.enable=1
@@ -227,7 +223,6 @@ persist.vendor.radio.report_codec=1
 persist.vendor.radio.sib16_support=1
 persist.vendor.radio.unicode_op_names=true
 persist.vendor.radio.vdp_on_ims_cap=1
-rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so
 
 # Sensors
 persist.vendor.sensors.direct_channel=false
