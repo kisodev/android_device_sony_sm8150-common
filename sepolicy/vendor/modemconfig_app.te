@@ -14,6 +14,3 @@ allow modemconfig_app app_data_file:{ file lnk_file } create_file_perms;
 
 # Allow modemconfig_app read files in /vendor
 r_dir_file(modemconfig_app, vendor_file)
-
-# Allow modemconfig_app to set cust_system_prop
-set_prop(modemconfig_app, cust_system_prop)

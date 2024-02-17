@@ -187,6 +187,7 @@ VENDOR_SECURITY_PATCH := 2021-10-01
 
 # Sepolicy
 include device/qcom/sepolicy_vndr/SEPolicy.mk
+include hardware/sony/sepolicy/qti/SEPolicy.mk
 BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
 PRODUCT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private
 
