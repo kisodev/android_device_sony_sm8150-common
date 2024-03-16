@@ -500,6 +500,7 @@ PRODUCT_PACKAGES += \
 # WiFi Display
 PRODUCT_PACKAGES += \
     libnl \
+    android.media.audio.common.types-V2-cpp \
     libwfdaac_vendor
 
 PRODUCT_BOOT_JARS += \
