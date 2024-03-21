@@ -286,10 +286,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fastbootd
 
-# Trust HAL
-PRODUCT_PACKAGES += \
-    vendor.lineage.trust@1.0-service
-
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1.vendor
@@ -473,7 +469,7 @@ PRODUCT_PACKAGES_DEBUG += \
 
 # USB
 PRODUCT_PACKAGES += \
-    android.hardware.usb@1.0-service
+    android.hardware.usb@1.3-service.dual_role_usb
 
 PRODUCT_SOONG_NAMESPACES += \
     vendor/qcom/opensource/usb/etc
