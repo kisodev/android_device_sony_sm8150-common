@@ -7,7 +7,7 @@
 
 # HALs
 /(vendor|system/vendor|odm|vendor/odm)/bin/hw/android\.hardware\.lights-service\.sony_kumano                u:object_r:hal_light_default_exec:s0
-/(vendor|system/vendor|odm|vendor/odm)/bin/hw/vendor\.semc\.hardware\.secd@1\.0-service                     u:object_r:hal_secd_default_exec:s0
+/(vendor|system/vendor|odm|vendor/odm)/bin/hw/vendor\.semc\.hardware\.secd@1\.0-service                     u:object_r:vendor_hal_secd_default_exec:s0
 /(vendor|system/vendor|odm|vendor/odm)/bin/hw/vendor\.semc\.hardware\.charger@1\.0-service                  u:object_r:hal_somc_charger_daemon_exec:s0
 /(vendor|system/vendor)/bin/sct_service                                                                     u:object_r:sct_service_exec:s0
 
