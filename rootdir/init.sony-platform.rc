@@ -416,14 +416,6 @@ on property:persist.bluetooth.a2dp_offload.disabled=true
 on property:ro.product.model=*
     setprop ro.boot.product.hardware.sku ${ro.product.model}
 
-# bugreport is triggered by holding down volume down, volume up and power
-service bugreport /system/bin/dumpstate -d -p -B -z \
-        -o /data/user_de/0/com.android.shell/files/bugreports/bugreport
-    class main
-    disabled
-    oneshot
-    keycodes 114 115 116
-
 # Set value to systemproperty for log level of ConnectivityManager and ConnectivityService.
 on boot && property:ro.build.type=userdebug
     setprop log.tag.ConnectivityManager DEBUG
