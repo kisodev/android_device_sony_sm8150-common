@@ -215,9 +215,13 @@ PRODUCT_PACKAGES_DEBUG += \
 
 # Camera
 PRODUCT_PACKAGES += \
+    android.hardware.camera.common@1.0.vendor \
     android.hardware.camera.device@3.2.vendor \
     android.hardware.camera.provider@2.6.vendor \
-    android.hardware.camera.common@1.0.vendor
+    libcamera_metadata.vendor \
+    libexif.vendor \
+    libutilscallstack.vendor \
+    libyuv.vendor
 
 # Charger
 PRODUCT_PACKAGES += \
@@ -394,7 +398,10 @@ PRODUCT_PACKAGES += \
 
 # QMI
 PRODUCT_PACKAGES += \
+    libcurl.vendor \
     libjson \
+    libjsoncpp.vendor \
+    libsqlite.vendor \
     libqti_vndfwk_detect \
     libqti_vndfwk_detect.vendor \
     libvndfwk_detect_jni.qti \
@@ -499,8 +506,9 @@ PRODUCT_PACKAGES += \
 
 # WiFi Display
 PRODUCT_PACKAGES += \
-    libnl \
     android.media.audio.common.types-V2-cpp \
+    libnl \
+    libpng.vendor \
     libwfdaac_vendor
 
 PRODUCT_BOOT_JARS += \
