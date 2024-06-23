@@ -99,6 +99,8 @@ PRODUCT_COPY_FILES += \
 
 AUDIO_HAL_DIR := hardware/qcom-caf/sm8150/audio
 
+# Add common definitions for Qualcomm
+$(call inherit-product, hardware/qcom-caf/common/common.mk)
 
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
