@@ -506,6 +506,12 @@ PRODUCT_PACKAGES += \
     wpa_supplicant \
     wpa_supplicant.conf
 
+# WiFi firmware symlinks
+PRODUCT_PACKAGES += \
+    firmware_wlan_mac.bin_symlink \
+    firmware_WCNSS_qcom_cfg.ini_symlink \
+	firmware_bdwlan.bin_symlink
+
 # WiFi Display
 PRODUCT_PACKAGES += \
     android.media.audio.common.types-V2-cpp \
