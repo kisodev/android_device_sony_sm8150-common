@@ -56,6 +56,7 @@
         <device name="SND_DEVICE_IN_VOICE_TTY_VCO_HANDSET_MIC" acdb_id="4"/>
         <device name="SND_DEVICE_IN_HANDSET_MIC" acdb_id="11"/>
         <device name="SND_DEVICE_IN_HANDSET_DMIC_STEREO" acdb_id="35"/>
+        <device name="SND_DEVICE_IN_HANDSET_DMIC_AEC_NS" acdb_id="577"/>
 
         <!-- SOMC acdb ids -->
         <device name="SND_DEVICE_OUT_SONY_VOICE_TTY_HCO_SPEAKER" acdb_id="124"/>
