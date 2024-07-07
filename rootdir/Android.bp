@@ -21,7 +21,7 @@ prebuilt_etc {
     name: "init.sony.rc",
     src: "init.sony.rc",
     sub_dir: "init",
-    vendor: true,
+    device_specific: true,
 }
 
 prebuilt_etc {
@@ -81,7 +81,7 @@ sh_binary {
 sh_binary {
     name: "init.qcom.msim.sh",
     src: "init.qcom.msim.sh",
-    vendor: true,
+    device_specific: true,
 }
 
 sh_binary {

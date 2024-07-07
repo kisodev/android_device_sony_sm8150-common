@@ -28,7 +28,10 @@ AB_OTA_PARTITIONS += \
     boot \
     dtbo \
     system \
+    system_ext \
     vbmeta \
+    odm \
+    product \
     vendor
 
 # Architecture
@@ -49,7 +52,7 @@ TARGET_NO_BOOTLOADER := true
 
 # Kernel
 BOARD_BOOT_HEADER_VERSION := 2
-BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom androidboot.memcg=1 lpm_levels.sleep_disabled=1 service_locator.enable=1 swiotlb=2048 loop.max_part=16 androidboot.usbcontroller=a600000.dwc3 buildid=KUMANO-1.2.0-211005-1847 panic_on_err=1
+BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom androidboot.memcg=1 lpm_levels.sleep_disabled=1 service_locator.enable=1 swiotlb=2048 loop.max_part=16 androidboot.usbcontroller=a600000.dwc3 buildid=KUMANO-1.2.0-211005-1847 panic_on_err=1 androidboot.boot_devices=soc/1d84000.ufshc
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_RAMDISK_OFFSET := 0x01000000
@@ -145,18 +148,39 @@ BOARD_USES_METADATA_PARTITION := true
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 0x04000000
 BOARD_DTBOIMG_PARTITION_SIZE := 8388608
+
 # Reserve space for data encryption (114994110464-16384)
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 114994094080
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 4362076160
-BOARD_VENDORIMAGE_PARTITION_SIZE := 1073741824
+
+BOARD_SUPER_PARTITION_BLOCK_DEVICES := system vendor oem
+BOARD_SUPER_PARTITION_METADATA_DEVICE := system
+# Sum of every existing partition
+BOARD_SUPER_PARTITION_SIZE := 5855248384
+BOARD_SUPER_PARTITION_SYSTEM_DEVICE_SIZE := 4362076160
+BOARD_SUPER_PARTITION_VENDOR_DEVICE_SIZE := 1073741824
+BOARD_SUPER_PARTITION_OEM_DEVICE_SIZE := 419430400
+
+BOARD_SUPER_PARTITION_GROUPS := somc_dynamic_partitions
+BOARD_SOMC_DYNAMIC_PARTITIONS_PARTITION_LIST := odm product system system_ext vendor
+# Dynamic partition size (for retrofit A/B) = BOARD_SUPER_PARTITION_SIZE - 4MB (4194304, for overhead)
+BOARD_SOMC_DYNAMIC_PARTITIONS_SIZE := 5851054080
+
+# Keep false for GAppers
+BOARD_PRODUCTIMAGE_MINIMAL_PARTITION_RESERVED_SIZE := false
+-include vendor/lineage/config/BoardConfigReservedSize.mk
+
+BOARD_ODMIMAGE_FILE_SYSTEM_TYPE := ext4
+BOARD_PRODUCTIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_SYSTEMIMAGE_FILE_SYSTEM_TYPE := ext4
+BOARD_SYSTEM_EXTIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
+
 BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
-# Temporarily avoid building odmimage for kumano
-#BOARD_ODMIMAGE_PARTITION_SIZE := 419430400
-#BOARD_ODMIMAGE_FILE_SYSTEM_TYPE := ext4
-TARGET_COPY_OUT_ODM := vendor/odm
-TARGET_COPY_OUT_PRODUCT := system/product
+
+TARGET_COPY_OUT_ODM := odm
+TARGET_COPY_OUT_PRODUCT := product
+TARGET_COPY_OUT_SYSTEM := system
+TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 TARGET_COPY_OUT_VENDOR := vendor
 
 # Properties
