@@ -434,11 +434,11 @@ system_ext/framework/vendor.qti.hardware.data.connection-V1.1-java.jar
 system_ext/framework/vendor.qti.hardware.data.dynamicdds-V1.0-java.jar
 system_ext/framework/vendor.qti.hardware.data.iwlan-V1.0-java.jar
 system_ext/framework/vendor.qti.hardware.data.qmi-V1.0-java.jar
--system_ext/lib64/com.quicinc.cne.api@1.0.so
--system_ext/lib64/com.quicinc.cne.api@1.1.so
--system_ext/lib64/com.quicinc.cne.constants@1.0.so
--system_ext/lib64/com.quicinc.cne.constants@2.0.so
--system_ext/lib64/com.quicinc.cne.constants@2.1.so
+system_ext/lib64/com.quicinc.cne.api@1.0.so
+system_ext/lib64/com.quicinc.cne.api@1.1.so
+system_ext/lib64/com.quicinc.cne.constants@1.0.so
+system_ext/lib64/com.quicinc.cne.constants@2.0.so
+system_ext/lib64/com.quicinc.cne.constants@2.1.so
 system_ext/lib64/vendor.qti.hardware.data.cne.internal.api@1.0.so
 system_ext/lib64/vendor.qti.hardware.data.cne.internal.constants@1.0.so
 system_ext/lib64/vendor.qti.hardware.data.cne.internal.server@1.0.so
@@ -1545,9 +1545,9 @@ vendor/etc/init/shsusrd.rc
 
 # Snapdragon Computer Vision Engine
 vendor/lib/libfastcvdsp_stub.so
--vendor/lib/libfastcvopt.so
+vendor/lib/libfastcvopt.so
 vendor/lib64/libfastcvdsp_stub.so
--vendor/lib64/libfastcvopt.so
+vendor/lib64/libfastcvopt.so
 
 # SSR
 vendor/bin/subsystem_ramdump
@@ -1556,8 +1556,8 @@ vendor/bin/subsystem_ramdump
 vendor/bin/tad
 
 # TA QMI
--vendor/lib64/libta.so
--vendor/lib/libta.so
+vendor/lib64/libta.so
+vendor/lib/libta.so
 
 # Time services
 vendor/app/TimeService/TimeService.apk
@@ -1578,12 +1578,12 @@ vendor/lib64/hw/thermal.somc.so
 vendor/lib64/liblights-core.so
 vendor/lib64/libsomc_thermal.so
 vendor/lib64/libsys-utils.so
--vendor/lib64/libthermalclient.so
+vendor/lib64/libthermalclient.so
 vendor/lib64/libthermal_engine.so
 vendor/lib64/vendor.semc.hardware.thermal@1.0.so
 vendor/lib/hw/thermal.somc.so
 vendor/lib/libsomc_thermal.so
--vendor/lib/libthermalclient.so
+vendor/lib/libthermalclient.so
 vendor/lib/libthermal_engine.so
 
 # Widevine DRM
@@ -1646,7 +1646,7 @@ vendor/firmware/tzwvcpybuf.mdt
 # QTI service tracker
 vendor/bin/hw/vendor.qti.hardware.servicetracker@1.2-service
 vendor/etc/init/vendor.qti.hardware.servicetracker@1.2-service.rc
--vendor/etc/vintf/manifest/vendor.qti.hardware.servicetracker@1.2-service.xml
+vendor/etc/vintf/manifest/vendor.qti.hardware.servicetracker@1.2-service.xml
 vendor/lib/hw/vendor.qti.hardware.servicetracker@1.2-impl.so
 vendor/lib64/hw/vendor.qti.hardware.servicetracker@1.2-impl.so
 
