@@ -85,6 +85,7 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib/libmorpho_dual_camera.so': blob_fixup()
             .add_needed('libutils.so'),
         'vendor/etc/gps.conf': blob_fixup()
+            .binary_regex_replace(b'\x92', b'\x27')
             .regex_replace('XTRA_CA_PATH=/usr/lib/ssl-1.1/certs', 'XTRA_CA_PATH=/system/etc/security/cacerts'),
         }  # fmt: skip
 
