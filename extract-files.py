@@ -87,7 +87,14 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/etc/gps.conf': blob_fixup()
             .binary_regex_replace(b'\x92', b'\x27')
             .regex_replace('XTRA_CA_PATH=/usr/lib/ssl-1.1/certs', 'XTRA_CA_PATH=/system/etc/security/cacerts'),
-        }  # fmt: skip
+        (
+            'vendor/lib64/mediadrm/libwvdrmengine.so',
+            'vendor/lib/mediadrm/libwvdrmengine.so',
+            'vendor/lib64/libwvhidl.so',
+            'vendor/lib/libwvhidl.so',
+        ): blob_fixup()
+            .add_needed('libcrypto_shim.so'),
+}  # fmt: skip
 
 lib_fixups: lib_fixups_user_type = {
         **lib_fixups,
