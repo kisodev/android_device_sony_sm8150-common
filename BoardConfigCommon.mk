@@ -125,11 +125,6 @@ TARGET_HAS_HDR_DISPLAY := true
 TARGET_HAS_WIDE_COLOR_DISPLAY := true
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 TARGET_USES_COLOR_METADATA := true
-TARGET_USES_DISPLAY_RENDER_INTENTS := true
-TARGET_USES_DRM_PP := true
-TARGET_USES_GRALLOC1 := true
-TARGET_USES_HWC2 := true
-TARGET_USES_ION := true
 
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
@@ -141,6 +136,9 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     vendor/lineage/config/device_framework_matrix.xml
 DEVICE_MATRIX_FILE := hardware/qcom-caf/common/compatibility_matrix.xml
 DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
+
+# Media
+TARGET_USES_ION := true
 
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
