@@ -463,9 +463,6 @@ PRODUCT_PACKAGES += \
     android.media.audio.common.types-V2-cpp \
     libpng.vendor
 
-PRODUCT_BOOT_JARS += \
-    WfdCommon
-
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-wfd.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-wfd.xml
 
