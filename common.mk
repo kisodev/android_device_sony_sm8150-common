@@ -221,6 +221,8 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.1-impl-qti.recovery \
     android.hardware.boot@1.1-service
 
+$(call soong_config_set,QTI_GPT_UTILS,USE_BSG_FRAMEWORK,false)
+
 PRODUCT_PACKAGES_DEBUG += \
     bootctl
 
