@@ -14,9 +14,6 @@
 # limitations under the License.
 #
 
-BUILD_BROKEN_ENFORCE_SYSPROP_OWNER := true
-BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
-
 BOARD_VENDOR := sony
 
 COMMON_PATH := device/sony/sm8150-common
