@@ -63,7 +63,11 @@ libs_add_vendor_suffix = (
 )
 
 blob_fixups: blob_fixups_user_type = {
-        (
+	(
+	    'system_ext/bin/wfdservice',
+	): blob_fixup()
+            .add_needed('libwfdservice_shim.so'),
+	(
             'system_ext/lib64/libwfdnative.so',
             'vendor/lib64/libvpplibrary.so',
             'vendor/lib64/libswiqisettinghelper.so',
