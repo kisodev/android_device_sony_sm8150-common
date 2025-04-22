@@ -107,7 +107,6 @@ lib_fixups: lib_fixups_user_type = {
         **lib_fixups,
         libs_add_vendor_suffix: lib_fixup_vendor_suffix,
         (
-            'libwpa_client',
             'libc2dcolorconvert',
             'libril',
         ): lib_fixup_remove,
